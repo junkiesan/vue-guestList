@@ -11,7 +11,8 @@ new Vue({
     },
     methods: {
       formSubmitted: function() {
-        console.log(this.newNameText)
+        this.guestName.push(this.newNameText)
+        this.newNameText = ''
       }
     }
 });
