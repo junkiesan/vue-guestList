@@ -23,18 +23,17 @@ new Vue({
           this.newNameText = ''
           this.eventCapacityPercentage = this.guestName.length / (this.eventCapacity / 100)
         }
-      },
-      methodCall: function() {
-        this.appStyles.marginTop = "50px"
       }
     },
     computed: {
       sortNames: function () {
         console.log('computed')
         return this.guestName.sort()
-      },
-      test: function() {
-        console.log('method text')
+      }
+    },
+    watch: {
+      guestName: function (data) {
+        console.log('Watch triggered')
       }
     }
 });
