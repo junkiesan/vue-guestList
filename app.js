@@ -58,8 +58,8 @@ var vm2 = new Vue({
     ]
   },
   methods: {
-    capacityChanged: function () {
-      vm1.eventCapacity = 15
+    changeTitle: function () {
+      this.$refs.name.hidden = true
     }
   }
 });
