@@ -17,16 +17,24 @@ new Vue({
     },
     methods: {
       formSubmitted: function() {
+        console.log('method')
         if(this.newNameText.length > 0 && this.eventCapacityPercentage < 100) {
           this.guestName.push(this.newNameText)
           this.newNameText = ''
           this.eventCapacityPercentage = this.guestName.length / (this.eventCapacity / 100)
         }
+      },
+      methodCall: function() {
+        this.appStyles.marginTop = "50px"
       }
     },
     computed: {
       sortNames: function () {
+        console.log('computed')
         return this.guestName.sort()
+      },
+      test: function() {
+        console.log('method text')
       }
     }
 });
