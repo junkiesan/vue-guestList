@@ -17,7 +17,6 @@ new Vue({
     },
     methods: {
       formSubmitted: function() {
-        console.log('method')
         if(this.newNameText.length > 0 && this.eventCapacityPercentage < 100) {
           this.guestName.push(this.newNameText)
           this.newNameText = ''
@@ -44,4 +43,12 @@ new Vue({
         return value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase()
       }
     }
+});
+
+
+new Vue({
+  el: '#navigation',
+  data: {
+    appName: 'Guest List'
+  }
 });
